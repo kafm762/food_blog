@@ -1,7 +1,41 @@
+body{
+    background-color: whitesmoke;
+}
+
 .form-signin {
-    margin-left: 35vmax;
+    margin-left: 32vmax;
     margin-top: 5vmax;
-    width: 30vw;
-    height: 80vh;
+    width: 35vw;
+    height: 64vh;
     position:absolute;
+    box-shadow: 5px 10px 50px #515751;
+    padding: 35px;
+    background-color: white;
+
+}
+
+h1{
+    font-family: "Italiana";
+    text-align: center;
+    font-size: 60px;
+    text-shadow: 80px;
+    color:#515751;
+    
+}
+
+.btn.btn-link{
+    color: black;
+    text-decoration: none;
+}
+
+.btn.btn-link:hover{
+    color: #515751;
+}
+
+.alert.alert-secondary{
+    color: #515751;
+    font-size: 18px;
+    font-family: "Italiana";
+    font-weight: 600;
+    margin-top: -15px;
 }

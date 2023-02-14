@@ -35,3 +35,12 @@ p{
     font-family: "Italiana";
     font-weight: 900;
 }
+
+.py-2.d-none.d-md-inline-block.link-secondary{
+    text-decoration: none;
+    color: #36453B;
+    
+}
+.py-2.d-none.d-md-inline-block.link-secondary:hover{
+    color: #515751;
+}

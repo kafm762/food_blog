@@ -1,14 +1,17 @@
 from flask import render_template,redirect,session,request,flash
 from flask_app import app
 from flask_app.models.user import User
-#from flask_app.models.book import Book
-#from flask_app.models.comment import Comment
 from flask_bcrypt import Bcrypt
 bcrypt = Bcrypt(app)
 
 @app.route('/')
 def index():
     return render_template('home.html')
+
+@app.route('/register')
+def registerr():
+    return render_template('register.html')
+
 
 @app.route('/register',methods=['POST'])
 def register():
@@ -54,4 +57,7 @@ def logout():
     session.clear()
     return redirect('/')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
