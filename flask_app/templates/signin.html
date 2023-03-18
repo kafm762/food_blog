@@ -10,35 +10,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+
 </head>
-
 <body>
-    <form class="form-signin" action="/login" method="post">
-        <h1>Welcome Back</h1>
-        <br>
-        {% with messages = get_flashed_messages(category_filter=['login']) %}
-            {% if messages %}
-            <div class="alert alert-secondary" role="alert">
-                    {% for message in messages %}
-                    <p>{{message}}</p>
-                    {% endfor %}
-            </div>
-            {% endif %}
-        {% endwith %}
-        <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email</label>
+    
+    <div id="back">
+        <div class="backRight"></div>
+        <div class="backLeft"></div>
+    </div>
+    <div class="backRight">
+        <div class="left">
+            <a href="/" class="btn btn-link">Home</a>
+            <div class="form">
+            <form action="/login" method="post">
+                <h2>Login</h2>
+                    {% with messages = get_flashed_messages(category_filter=['login']) %}
+                        {% if messages %}
+                            <div class="alert alert-secondary" role="alert">
+                                {% for message in messages %}
+                                <p>{{message}}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    {% endwith %}
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email</label>
+                </div>
+                <br>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <br>
+                <br>
+                <input type="submit" value="Login" class="btn btn-outline-dark">
+                <a href="/registerr" class="btn btn-link" >Sign Up</a>
+                
+            </form>
         </div>
-        <br>
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
         </div>
-        <br>
-        <br>
-        <input type="submit" value="Login" class="btn btn-outline-dark">
-        <a href="/register" class="btn btn-link">Register</a>
-    </form>
-
+    </div>
+    </div>
 </body>
 </html>

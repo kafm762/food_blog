@@ -1,6 +1,6 @@
 h1{
     font-family: 'Italiana';
-    font-size: 55px;
+    font-size: 52px;
     text-align: center;
 }
 
@@ -12,11 +12,13 @@ h1{
     position:absolute;
     box-shadow: 5px 10px 50px #515751;
     padding: 35px;
+    overflow: scroll;
 }
 
 .btn.btn-link{
     color: black;
     text-decoration: none;
+    
 }
 
 .btn.btn-link:hover{
